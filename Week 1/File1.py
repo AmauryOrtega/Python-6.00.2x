@@ -114,19 +114,3 @@ calories = [123, 154, 258, 354, 365, 150, 95, 195]
 foods = buildMenu(names, values, calories)
 testGreedys(foods, 750)
 testGreedys(foods, 1000)
-
-trips = []
-cows_copy = {}
-cows_copy = cows.copy()
-cows_copy = [(name, cows_copy[name]) for name in sorted(cows_copy, key=cows_copy.get, reverse=True)]
-
-weight = 0
-while weight <= limit:
-    # Each trip
-    weight = 0
-    trip = []
-    for cow, value in cows_copy:
-        if weight + value <= limit:
-            trip.append(cow)
-            cows_copy.remove((cow, value))
-    trips.append(trip)
