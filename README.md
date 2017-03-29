@@ -21,15 +21,15 @@ Introduction to Computational Thinking and Data Science
     
     Select the best combination possible from the remaining
     
-* **Greedy Algorithm**
+* **Greedy Algorithm** [file](Week%201/Optimization-Knapsack.py)
     ```
     while knapsack not full
        put "best" available item in knapsack
     ```
-    Can lead to local optimum instead of global optimum solution
-    
-    Can't know how good is the approximation
-    
-    It's easy to implement
+    * Can lead to local optimum instead of global optimum solution
 
-    Computationally efficient
+    * Can't know how good is the approximation
+    
+    * It's easy to implement
+
+    * Computationally efficient
