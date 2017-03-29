@@ -3,30 +3,6 @@
 Created on 18/03/2017
 
 @author: Amaury Ortega <amauryocortega@gmail.com>
-
-Optimization model:
-    Objective function that has to be maximized or minimized
-    Set of constrains
-
-Knapsack problem
-Take the maximum of items in your backpack without surpassing the constrains
-    0/1 problem - inherently O(2^n)
-        Take it or not
-    Continuous or fractional problem
-        Can take part of an item
-
-Solving
-    Brute Force O(2^n)
-        Enumerate all possible combinations. Power Set
-        Remove all the combinations that doesn't keep the constrains
-        Select the best combination possible from the remaining
-    Greedy Algorithm
-        while knapsack not full
-            put "best" available item in knapsack
-        Can lead to local optimum instead of global optimum solution
-        Can't know how good is the approximation
-        It's easy to implement
-        Computationally efficient
 """
 
 
@@ -68,7 +44,7 @@ def greedy(items, maxCost, keyFunction):
     keyFunction maps elements of items to numbers
     """
     # n log(n) in python
-    itemsCopy = sorted(items, key=keyFunction, reverse=True)  # Best to wost according to keyFunction
+    itemsCopy = sorted(items, key=keyFunction, reverse=True)  # Best to worst according to keyFunction
     result = []
     totalValue, totalCost = 0.0, 0.0
     # n
@@ -104,3 +80,4 @@ values = [89, 90, 95, 100, 90, 79, 50, 10]
 calories = [123, 154, 258, 354, 365, 150, 95, 195]
 foods = buildMenu(names, values, calories)
 testGreedyes(foods, 750)
+testGreedyes(foods, 1000)
