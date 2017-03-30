@@ -12,12 +12,12 @@ Introduction to Computational Thinking and Data Science
     * Take it or not
     * Continuous or fractional problem
     * Can take part of an item
-    #####Brute Force O(2^n)
+    ##### Brute Force O(2^n)
     * Enumerate all possible combinations. Power Set
     * Remove all the combinations that does not keep the constrains
     * Select the best combination possible from the remaining
     
-    #####Done using search tree
+    ##### Done using search tree
     _Left first, depth first enumeration_ [File.](Week%201/Decision-Trees.py)
     Optimized using memoization [here](Week%201/Dynamic-Programming.py)
     
@@ -37,7 +37,7 @@ Introduction to Computational Thinking and Data Science
     _Optimization_ could be done if the nodes that violates the constrains are excluded, 
     this doesn't change the complexity.
 
-    #####Greedy Algorithm
+    ##### Greedy Algorithm
     Done [here](Week%201/Optimization-Knapsack.py)
     ```
     while knapsack not full
@@ -48,8 +48,8 @@ Introduction to Computational Thinking and Data Science
     * It's easy to implement
     * Computationally efficient
 
-    #####Dynamic Programming
-    ######Memoization
+    ##### Dynamic Programming
+    ###### Memoization
     Create a table to record what we've done. Trade time for space.
     * Before computing fib(x), check if value of fib(x) is already stored in the table
         * If so, look it up.
